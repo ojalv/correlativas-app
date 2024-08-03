@@ -1,0 +1,9 @@
+:root {
+  --ESTADO_PENDIENTE: grey;
+  --ESTADO_CURSO: orange;
+  --ESTADO_REGULAR: yellow;
+  --ESTADO_APROBADO: yellowgreen;
+  --ESTADO_LIBRE: red;
+}
+
+

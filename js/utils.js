@@ -11,22 +11,22 @@ function renderMaterias(carrera) {
     element.id = `materia${materia.ID}`; //agrega el ID unico de la materia al id del elemento
     switch (materia.estado) {
       case Materia.ESTADO_APROBADO:
-        element.style.backgroundColor = "green";
+        element.style.backgroundColor = "var(--ESTADO_APROBADO)";
         break;
 
       case Materia.ESTADO_CURSO:
-        element.style.backgroundColor = "orange";
+        element.style.backgroundColor = "var(--ESTADO_CURSO)";
         break;
 
       case Materia.ESTADO_LIBRE:
-        element.style.backgroundColor = "red";
+        element.style.backgroundColor = "var(--ESTADO_LIBRE)";
         break;
 
       case Materia.ESTADO_PENDIENTE:
-        element.style.backgroundColor = "grey";
+        element.style.backgroundColor = "var(--ESTADO_PENDIENTE)";
         break;
       case Materia.ESTADO_REGULAR:
-        element.style.backgroundColor = "yellow";
+        element.style.backgroundColor = "var(--ESTADO_REGULAR)";
         break;
 
       default:
@@ -96,44 +96,6 @@ function renderNiveles(carrera) {
   }
 }
 
-function renderInfo(carrera, idMateria) {
-  //busqueda
-  idx = carrera.materias.findIndex((materia) => {
-    return `materia${materia.ID}` === idMateria;
-  });
-  document.getElementById(
-    "info"
-  ).innerHTML = `<h4>Info</h4><span class="hidden" id="idmateria">${idMateria.replace(
-    "materia",
-    ""
-  )}</span><span class="hidden" id="idxmateria">${idx}</span>`;
-  //nombre de la materia
-  let nombre = document.createElement("div");
-  nombre.textContent = carrera.materias[idx].nombre;
-
-  //tipo de materia
-  let tipo = document.createElement("div");
-  if (carrera.materias[idx].tipo === Materia.TIPO_ANUAL) {
-    tipo.textContent = "Modalidad: Anual";
-  } else if (carrera.materias[idx].tipo === Materia.TIPO_SEMESTRAL) {
-    tipo.textContent = "Modalidad: semestral";
-    if (carrera.materias[idx].primerSemestre === true) {
-      let s1 = document.createElement("div");
-      s1.textContent = "se cursa el primer semestre";
-      tipo.appendChild(s1);
-    }
-    if (carrera.materias[idx].segundoSemestre === true) {
-      let s1 = document.createElement("div");
-      s1.textContent = "se cursa el segundo semestre";
-      tipo.appendChild(s1);
-    }
-  }
-
-  document.getElementById("info").appendChild(nombre);
-  document.getElementById("info").appendChild(tipo);
-}
-function renderSelectEstado(carrera) {
-  //selecciona el estado actual de la materia
-  document.getElementById("estado").selectedIndex =
-    carrera.materias[idx].estado;
+function openModal() {
+  
 }

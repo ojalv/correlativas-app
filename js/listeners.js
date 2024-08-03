@@ -1,16 +1,10 @@
 document.addEventListener("click", (e) => {
   if (e.target.id.includes("materia")) {
-    // abre moodal materia
-    document.getElementById("modal").classList.toggle("hidden");
-    document.getElementById("opacity").classList.toggle("hidden");
-    renderInfo(carrera, e.target.id);
-    renderSelectEstado(carrera, e.target.id);
+    // abre un pequenio moodal que permite cambiar el estado de la materia
+    
     // renderiza la informacion de la materia
   } else if (e.target.id.includes("close")) {
     //cierra modal
-    document.getElementById("modal").classList.toggle("hidden");
-    document.getElementById("opacity").classList.toggle("hidden");
-
     // Limpia la info de la materia en el modal
   }
 });

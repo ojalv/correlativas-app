@@ -5,55 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/estados.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <title>Correlativas App</title>
   </head>
   <body>
     <h1>Correlativas App</h1>
     <div id="roadmap"></div>
-    <div id="modal" class="modal hidden">
-      <div id="menu" class="menu">
-        <div id="close" class="close">x</div>
-        <div id="info" class="info">
-          <h4>Info</h4>
-        </div>
-        <div id="opciones" class="opciones">
-          <h4>Opciones</h4>
-          <div>
-            <span>Estado</span>
-            <select name="estado" id="estado">
-              <option value="pendiente">pendiente</option>
-              <option value="curso">en curso</option>
-              <option value="regular">regular</option>
-              <option value="aprobado">aprobado</option>
-              <option value="libre">libre</option>
-            </select>
-            <div>
-              <span>Correlativas</span>
-              <div id="correlativas" class="correlativas"></div>
-            </div>
-          </div>
-        </div>
-        <div id="agregarCorrelativa">
-          <h4>Agregar Correlativa</h4>
-          <select name="" id="selectAgregarCorrelativas">
-            <!-- Renderizar opciones -->
-          </select>
-        </div>
-        <div id="removerCorrelativa">
-          <h4>Quitar Correlativa</h4>
-          <select name="" id="selectRemoverCorrelativas">
-            <!-- Renderizar opciones -->
-          </select>
-        </div>
-      </div>
-    </div>
+
     <div id="opacity" class="opacity hidden"></div>
     <script src="/js/objects/materia.js"></script>
     <script src="/js/objects/carrera.js"></script>
     <script src="/js/utils.js"></script>
-    <script src="/js/modal.js"></script>
+    <script src="/js/listeners.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>
