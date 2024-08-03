@@ -1,14 +1,14 @@
-function renderMaterias(carrera) {
-  carrera.materias.forEach((materia) => {
+function renderMaterias(materias) {
+  materias.forEach((materia) => {
     document.getElementById(`${materia.ID[0]}anual`).innerHTML = "";
     document.getElementById(`${materia.ID[0]}semestre2`).innerHTML = "";
     document.getElementById(`${materia.ID[0]}semestre1`).innerHTML = "";
   });
 
-  carrera.materias.forEach((materia) => {
+  materias.forEach((materia) => {
     const element = document.createElement("div"); //crea elemento div
-    element.textContent = `${materia.nombre}`; //agrega el nombre de la materia como contenido
     element.id = `materia${materia.ID}`; //agrega el ID unico de la materia al id del elemento
+    element.innerHTML = `<div class="estados" id="estados${materia.ID}"></div><p>${materia.nombre}</p>`; //agrega el nombre de la materia como contenido
     switch (materia.estado) {
       case Materia.ESTADO_APROBADO:
         element.style.backgroundColor = "var(--ESTADO_APROBADO)";
@@ -96,6 +96,4 @@ function renderNiveles(carrera) {
   }
 }
 
-function openModal() {
-  
-}
+function openModal() {}

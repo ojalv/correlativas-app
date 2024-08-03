@@ -58,23 +58,4 @@ option[value="libre"] {
   background-color: red;
 }
 
-.correlativas {
-  background-color: aliceblue;
-  border: solid 1px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.correlativas div {
-  cursor: pointer;
-  user-select: none;
-  border: dashed 1px ;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}

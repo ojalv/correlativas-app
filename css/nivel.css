@@ -1,0 +1,20 @@
+.lvl {
+    border: dashed 1px black;
+    width: 454px;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .lvl h2 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 12px;
+  }
+  
+  .lvl h3 {
+    margin: 12px;
+    margin-bottom: 10px;
+  }
+  

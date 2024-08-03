@@ -143,4 +143,4 @@ const carrera = new Carrera(
 
 carrera.loadMateriasFromLocalStorage();
 renderNiveles(carrera);
-renderMaterias(carrera);
+renderMaterias(carrera.materias);

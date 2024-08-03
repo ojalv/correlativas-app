@@ -6,4 +6,18 @@
   --ESTADO_LIBRE: red;
 }
 
+.estados {
+  display: flex;
+  justify-content: space-evenly;
+  width: 180px;
+  height: 40px;
+  position: absolute;
+  bottom: 40px;
+  display: block;
+  background-color: red;
+}
 
+.estados .estado {
+  width: 30px;
+  height: 30px;
+}
