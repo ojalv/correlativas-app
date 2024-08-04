@@ -8,7 +8,9 @@ function renderMaterias(materias) {
   materias.forEach((materia) => {
     const element = document.createElement("div"); //crea elemento div
     element.id = `materia${materia.ID}`; //agrega el ID unico de la materia al id del elemento
-    element.innerHTML = `<div class="estados" id="estados${materia.ID}"></div><p>${materia.nombre}</p>`; //agrega el nombre de la materia como contenido
+    element.innerHTML = `<div class="estados hidden" id="estados${materia.ID}">
+    <div class="estado pendiente"></div><div class="estado curso"></div><div class="estado regular"></div><div class="estado aprobado"></div><div class="estado libre"></div>
+    </div><p class="nombre" id="nombre-materia-${materia.ID}">${materia.nombre}</p>`; //agrega el nombre de la materia como contenido
     switch (materia.estado) {
       case Materia.ESTADO_APROBADO:
         element.style.backgroundColor = "var(--ESTADO_APROBADO)";
@@ -96,4 +98,6 @@ function renderNiveles(carrera) {
   }
 }
 
-function openModal() {}
+function toggleEstados(idMateria) {
+  document.getElementById(`estados${idMateria}`).classList.toggle("hidden");
+}

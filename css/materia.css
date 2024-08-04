@@ -1,21 +1,24 @@
 .materia {
-    position: relative !important;
-    width: 180px;
-    height: 40px;
-    text-align: center;
-    margin: 20px 0px;
-    border: solid 1px;
-    border-radius: 8px;
-    box-shadow: 2px 2px rgba(0,0,0,0.5);
-    user-select: none;
-    cursor: pointer;
-  }
-
-.materia p {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+  position: relative !important;
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  margin: 20px 0px;
+  border: solid 1px;
+  border-radius: 8px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  user-select: none;
 }
 
-
+.materia p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
