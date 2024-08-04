@@ -1,4 +1,5 @@
 document.addEventListener("click", (e) => {
+  closeAllEstados(materias)
   if (e.target.id.includes("materia")) {
     // abre un pequenio moodal que permite cambiar el estado de la materia
     toggleEstados(e.target.id.replace("nombre-materia-",""))

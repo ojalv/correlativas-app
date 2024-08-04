@@ -101,3 +101,9 @@ function renderNiveles(carrera) {
 function toggleEstados(idMateria) {
   document.getElementById(`estados${idMateria}`).classList.toggle("hidden");
 }
+
+function closeAllEstados(materias) {
+  materias.forEach((m) => {
+    document.getElementById(`estados${m.ID}`).classList.add("hidden");
+  });
+}
