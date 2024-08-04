@@ -137,10 +137,9 @@ let materias = [
 ];
 
 const carrera = new Carrera(
-  "Tecnicatura superior en desarrollo web y aplicaciones digitales"
+  "Tecnicatura superior en desarrollo web y aplicaciones digitales",materias
 );
-// carrera.saveMateriasToLocalStorage();
-
+carrera.saveMateriasToLocalStorage();
 carrera.loadMateriasFromLocalStorage();
 renderNiveles(carrera);
 renderMaterias(carrera.materias);
