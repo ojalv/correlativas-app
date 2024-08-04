@@ -1,0 +1,99 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.correlativas-options {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.correlativas,
+.select-correlativa {
+  display: flex;
+  flex-direction: column;
+  max-width: 180px;
+  max-height: 120px;
+  overflow: scroll;
+  border: solid 1px;
+}
+
+.correlativa {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: none;
+  background-color: wheat;
+  border-bottom: 1px solid;
+  height: 40px;
+}
+
+.correlativas .correlativa:last-child {
+  border-bottom: none;
+}
+
+.correlativa-remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid;
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  cursor: pointer;
+}
+
+.correlativa-remove:hover {
+  background-color: rgb(255, 93, 93);
+}
+.correlativa-add {
+  justify-content: center;
+  align-items: center;
+}
+
+.correlativa-add .correlativa-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dashed 1px black;
+  margin: 10px 0px;
+  height: 30px;
+  width: 170px;
+}
+
+.select-correlativa {
+  width: 180px;
+  border-left: 0px;
+}
+
+.select-correlativa .correlativa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+.select-correlativa .correlativa:last-child {
+  border-bottom: none;
+}
+
+.select-correlativa .correlativa:hover {
+  background-color: rgb(201, 255, 120);
+}
+.correlativa-nombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.correlativa-add {
+  cursor: pointer;
+}
+
+.correlativa-add:hover {
+  background-color: rgb(201, 255, 120);
+}
