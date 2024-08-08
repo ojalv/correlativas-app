@@ -9,9 +9,13 @@ function renderMaterias(materias) {
     const element = document.createElement("div"); //crea elemento div
     element.id = `materia${materia.ID}`; //agrega el ID unico de la materia al id del elemento
     element.innerHTML = `<div class="estados hidden" id="estados${materia.ID}">
-    <div class="estado pendiente"></div><div class="estado curso"></div><div class="estado regular"></div><div class="estado aprobado"></div><div class="estado libre"></div>
+    <div class="estado pendiente" id="estado-option-0${materia.ID}"></div>
+    <div class="estado curso" id="estado-option-1${materia.ID}"></div>
+    <div class="estado regular" id="estado-option-2${materia.ID}"></div>
+    <div class="estado aprobado" id="estado-option-3${materia.ID}"></div>
+    <div class="estado libre" id="estado-option-4${materia.ID}"></div>
     </div><p class="nombre" id="nombre-materia-${materia.ID}">${materia.nombre}</p>`; //agrega el nombre de la materia como contenido
-    switch (materia.estado) {
+    switch (parseInt(materia.estado)) {
       case Materia.ESTADO_APROBADO:
         element.style.backgroundColor = "var(--ESTADO_APROBADO)";
         break;
@@ -105,5 +109,14 @@ function toggleEstados(idMateria) {
 function closeAllEstados(materias) {
   materias.forEach((m) => {
     document.getElementById(`estados${m.ID}`).classList.add("hidden");
+  });
+}
+function cambiarEstadoMateria(idOption, materias) {
+  const estado = idOption.replace("estado-option-", "")[0];
+  const idMateria = idOption.replace(`estado-option-${estado}`, "");
+  materias.forEach((materia) => {
+    if (materia.ID === idMateria) {
+      materia.estado = estado;
+    }
   });
 }

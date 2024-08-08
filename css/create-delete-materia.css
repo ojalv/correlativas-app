@@ -1,0 +1,31 @@
+.cd-buttons {
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+.cd-buttons .cd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  padding: 4px 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cd-buttons .create-btn {
+  background-color: greenyellow;
+}
+
+.cd-buttons .create-btn:hover {
+  background-color: rgb(201, 255, 120);
+}
+
+.cd-buttons .delete-btn {
+  background-color: red;
+}
+
+.cd-buttons .delete-btn:hover {
+  background-color: rgb(255, 93, 93);
+}
